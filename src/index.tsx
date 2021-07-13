@@ -1,27 +1,5 @@
-import { h, render } from 'preact';
-import { Toy } from './components/Toy';
+import { renderToy } from './renderToy';
 import './style.css';
-
-const renderToy = (targetTabConteiner: Element | null): void => {
-  if (!targetTabConteiner) {
-    return;
-  }
-  const toolbars = targetTabConteiner.querySelectorAll('markdown-toolbar');
-  toolbars.forEach((toolbar) => {
-    if (!toolbar || !toolbar.childNodes) {
-      return;
-    }
-    const toolbarItems = Array.from(toolbar.children);
-    const isAlreadyAppended = toolbarItems.some((toolbarItem) =>
-      toolbarItem.className?.includes('pr-review-toy')
-    );
-    if (isAlreadyAppended) {
-      return;
-    }
-    const container = toolbar.appendChild(document.createElement('div'));
-    render(<Toy containerEl={targetTabConteiner} />, toolbar, container);
-  });
-};
 
 // main
 const tabContainers = document.querySelectorAll('tab-container');
