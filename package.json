@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "parcel start sample.html",
+    "start": "parcel start sample.html -d temp",
     "build": "rm -rf public/dist/* && parcel build src/index.tsx -d public/dist --out-file content_script.js --no-minify",
     "build:prod": "rm -rf public/dist/* && parcel build src/index.tsx -d public/dist --out-file content_script.js"
   },
