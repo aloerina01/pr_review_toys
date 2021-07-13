@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "start": "parcel start sample.html",
+    "build": "parcel build src/index.tsx --out-file content_script.js"
+  },
+  "dependencies": {
+    "preact": "^10.5.14"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.9.4",
+    "typescript": "^4.3.5"
+  }
+}
