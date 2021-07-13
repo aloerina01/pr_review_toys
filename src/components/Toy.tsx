@@ -20,7 +20,7 @@ export const Toy: FunctionComponent<{ containerEl: Element }> = ({ containerEl }
   };
   return (
     <div
-      class="details-reset details-overlay flex-auto toolbar-item select-menu select-menu-modal-right js-saved-reply-container hx_rsm custom-toy"
+      class="details-reset details-overlay flex-auto toolbar-item select-menu select-menu-modal-right js-saved-reply-container hx_rsm pr-review-toy"
       onClick={onClickToyIcon}
     >
       <div

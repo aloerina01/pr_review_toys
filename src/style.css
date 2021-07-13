@@ -1,0 +1,12 @@
+.pr-review-toy .intension-item {
+  padding: 8px 10px;
+  border-top: 1px solid #ebedef;
+}
+
+.pr-review-toy .intension-item:first-child {
+  border-top: 0;
+}
+
+.pr-review-toy .intension-item:hover {
+  background-color: #f6f8fa;
+}

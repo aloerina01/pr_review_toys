@@ -1,5 +1,6 @@
 import { h, render } from 'preact';
 import { Toy } from './components/Toy';
+import './style.css';
 
 const renderToy = (targetTabConteiner: Element | null): void => {
   if (!targetTabConteiner) {
@@ -12,7 +13,7 @@ const renderToy = (targetTabConteiner: Element | null): void => {
     }
     const toolbarItems = Array.from(toolbar.children);
     const isAlreadyAppended = toolbarItems.some((toolbarItem) =>
-      toolbarItem.className?.includes('custom-toy')
+      toolbarItem.className?.includes('pr-review-toy')
     );
     if (isAlreadyAppended) {
       return;

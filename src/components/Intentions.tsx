@@ -1,10 +1,5 @@
 import { h, FunctionComponent } from 'preact';
 
-const liStyle = (isFirst: boolean) => ({
-  padding: '8px 10px',
-  borderTop: `${isFirst ? '0px' : '1px solid #ebedef'}`,
-});
-
 const INTENTIONS = {
   Idea: {
     label: 'アイデア',
@@ -31,17 +26,17 @@ const INTENTIONS = {
 export const Intentions: FunctionComponent<{ onClick: (markdownText: string) => void }> = ({
   onClick,
 }) => (
-  <ul>
-    <li style={liStyle(true)} onClick={() => onClick(INTENTIONS.Idea.markdown)}>
+  <ul class="intension-list">
+    <li class="intension-item" onClick={() => onClick(INTENTIONS.Idea.markdown)}>
       {INTENTIONS.Idea.label}
     </li>
-    <li style={liStyle(false)} onClick={() => onClick(INTENTIONS.Question.markdown)}>
+    <li class="intension-item" onClick={() => onClick(INTENTIONS.Question.markdown)}>
       {INTENTIONS.Question.label}
     </li>
-    <li style={liStyle(false)} onClick={() => onClick(INTENTIONS.Discussion.markdown)}>
+    <li class="intension-item" onClick={() => onClick(INTENTIONS.Discussion.markdown)}>
       {INTENTIONS.Discussion.label}
     </li>
-    <li style={liStyle(false)} onClick={() => onClick(INTENTIONS.Improvement.markdown)}>
+    <li class="intension-item" onClick={() => onClick(INTENTIONS.Improvement.markdown)}>
       {INTENTIONS.Improvement.label}
     </li>
   </ul>
