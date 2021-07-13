@@ -3,7 +3,9 @@ import { useState } from 'preact/hooks';
 
 import { Intentions } from './Intentions';
 
-const LABEL = 'Add your intentions';
+const ICON = '☆';
+const ICON_TIP = 'Add your intentions';
+const INTENSION_LIST_HEADER = 'Select a intention';
 
 export const Toy: FunctionComponent<{ containerEl: Element }> = ({ containerEl }) => {
   const [isShown, setShown] = useState(false);
@@ -25,9 +27,9 @@ export const Toy: FunctionComponent<{ containerEl: Element }> = ({ containerEl }
     >
       <div
         class="text-center tooltipped tooltipped-sw menu-target py-2 p-md-1 hx_rsm-trigger ml-1"
-        aria-label={LABEL}
+        aria-label={ICON_TIP}
       >
-        <span>☆</span>
+        <span>{ICON}</span>
         <span class="dropdown-caret hide-sm"></span>
       </div>
       <div
@@ -35,7 +37,7 @@ export const Toy: FunctionComponent<{ containerEl: Element }> = ({ containerEl }
         class="select-menu-modal position-absolute right-0 js-saved-reply-menu hx_rsm-modal"
       >
         <div class="select-menu-header d-flex">
-          <span class="select-menu-title flex-auto">Select a intention</span>
+          <span class="select-menu-title flex-auto">{INTENSION_LIST_HEADER}</span>
         </div>
         <div>
           <Intentions onClick={onClickIntention} />
