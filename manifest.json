@@ -1,14 +1,1 @@
-{
-  "manifest_version": 2,
-  "name": "PR Review Toys",
-  "version": "0.1.0",
-  "description": "pull request のコメントエディタに ちょっとした Toy を追加し、コミュニケーションを穏やかにする",
-
-  "author": "aloerina",
-  "content_scripts": [
-    {
-      "matches": ["https://github.com/*"],
-      "js": ["dist/content_script.js"]
-    }
-  ]
-}
+public/manifest.json
