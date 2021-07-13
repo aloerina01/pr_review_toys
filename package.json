@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "parcel start sample.html",
-    "build": "rm -rf dist/* && parcel build src/index.tsx --out-file content_script.js"
+    "build": "rm -rf public/dist/* && parcel build src/index.tsx -d public/dist --out-file content_script.js --no-minify",
+    "build:prod": "rm -rf public/dist/* && parcel build src/index.tsx -d public/dist --out-file content_script.js"
   },
   "dependencies": {
     "preact": "^10.5.14"
