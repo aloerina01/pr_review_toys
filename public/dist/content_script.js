@@ -13,6 +13,6 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"preact/jsx-runtime":"yOgR","preact":"aSor","./components/Toy":"JkLE"}],"iMte":[function(require,module,exports) {
 
 },{}],"zo2T":[function(require,module,exports) {
-"use strict";var e=require("./renderToy");require("./style.css");var r=document.querySelectorAll("tab-container");r.forEach(function(r){return(0,e.renderToy)(r)});var t=new MutationObserver(function(){document.querySelectorAll("tab-container").forEach(function(r){return(0,e.renderToy)(r)})});t.observe(document.body,{childList:!0,subtree:!0,attributes:!0});
+"use strict";var e=require("./renderToy");require("./style.css");var r=document.querySelectorAll(".js-previewable-comment-form");r.forEach(function(r){return(0,e.renderToy)(r)});var t=new MutationObserver(function(){document.querySelectorAll(".js-previewable-comment-form").forEach(function(r){return(0,e.renderToy)(r)})});t.observe(document.body,{childList:!0,subtree:!0,attributes:!0});
 },{"./renderToy":"Y7nd","./style.css":"iMte"}]},{},["zo2T"], null)
 //# sourceMappingURL=/content_script.js.map
