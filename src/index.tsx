@@ -2,12 +2,12 @@ import { renderToy } from './renderToy';
 import './style.css';
 
 // main
-const tabContainers = document.querySelectorAll('tab-container');
-tabContainers.forEach(container => renderToy(container));
+const targetEls = document.querySelectorAll('.js-previewable-comment-form');
+targetEls.forEach(targetEl => renderToy(targetEl));
 
 // 動的に markdown editor が追加されたときに Toy を追加する
 const mutationObserver = new MutationObserver(() => {
-  const tabContainers = document.querySelectorAll('tab-container');
-  tabContainers.forEach(container => renderToy(container));
+  const targetEls = document.querySelectorAll('.js-previewable-comment-form');
+  targetEls.forEach(targetEl => renderToy(targetEl));
 });
 mutationObserver.observe(document.body, { childList: true, subtree: true, attributes: true });
